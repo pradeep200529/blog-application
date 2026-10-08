@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Create an account | Fieldnotes</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body data-page="register">
+	<header class="site-header">
+		<a class="brand" href="index.html">Fieldnotes<span>.</span></a>
+		<nav class="site-nav" aria-label="Main navigation">
+			<a href="index.html">Stories</a>
+			<a href="login.html">Log in</a>
+		</nav>
+	</header>
+	<main class="form-layout">
+		<section class="form-intro">
+			<p class="eyebrow">Make yourself at home</p>
+			<h1>A little space for your ideas.</h1>
+			<p>Join the community, read thoughtful stories, and publish your own.</p>
+		</section>
+		<form class="form-panel" id="register-form">
+			<h2>Create an account</h2>
+			<label for="name">Name</label>
+			<input id="name" name="name" type="text" autocomplete="name" maxlength="80" required>
+			<label for="email">Email address</label>
+			<input id="email" name="email" type="email" autocomplete="email" required>
+			<label for="password">Password</label>
+			<input id="password" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required>
+			<p class="field-note">Use at least 8 characters.</p>
+			<p class="status-message" id="form-status" role="status" aria-live="polite"></p>
+			<button class="primary-button" type="submit">Create account</button>
+			<p class="form-footnote">Already a member? <a href="login.html">Log in</a></p>
+		</form>
+	</main>
+	<footer class="site-footer"><a class="brand" href="index.html">Fieldnotes<span>.</span></a><span>Made for the things worth saying.</span></footer>
+</body>
+</html>

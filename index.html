@@ -3,38 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Application</title>
+    <meta name="theme-color" content="#17362f">
+    <title>Fieldnotes | A community blog</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
-<body>
-
-    <header>
-        <h1>My Blog</h1>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="login.html">Login</a>
-            <a href="register.html">Register</a>
-            <a href="dashboard.html">Dashboard</a>
+<body data-page="home">
+    <header class="site-header">
+        <a class="brand" href="index.html">Fieldnotes<span>.</span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="index.html" aria-current="page">Stories</a>
+            <a href="dashboard.html" data-auth-only hidden>Dashboard</a>
+            <a href="create-blog.html" data-auth-only hidden>Write</a>
+            <a href="login.html" data-anon-only>Log in</a>
+            <a class="nav-cta" href="register.html" data-anon-only>Join</a>
+            <button class="nav-button" type="button" data-logout hidden>Log out</button>
         </nav>
     </header>
 
-    <main>
-        <h2>Welcome to My Blog</h2>
+    <main class="page-shell">
+        <section class="intro-band">
+            <div>
+                <p class="eyebrow">A place for ideas in progress</p>
+                <h1>Good stories make room for <em>everyone.</em></h1>
+                <p class="intro-copy">Read notes from curious people, or share something you have been thinking about.</p>
+                <a class="button-link" href="register.html" data-anon-only>Write your first post <span aria-hidden="true">&#8594;</span></a>
+                <a class="button-link" href="create-blog.html" data-auth-only hidden>Write a post <span aria-hidden="true">&#8594;</span></a>
+            </div>
+            <p class="issue-mark" aria-hidden="true">Ideas<br>worth<br>keeping.</p>
+        </section>
 
-        <div class="blog-card">
-            <h3>My First Blog</h3>
-            <p>This is my first blog post.</p>
-            <button>Read More</button>
-        </div>
-
-        <div class="blog-card">
-            <h3>Learning Web Development</h3>
-            <p>I am learning HTML, CSS and JavaScript.</p>
-            <button>Read More</button>
-        </div>
+        <section class="feed-section" aria-labelledby="feed-heading">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">From the community</p>
+                    <h2 id="feed-heading">Latest stories</h2>
+                </div>
+                <span class="section-note">New thoughts, shared openly</span>
+            </div>
+            <p class="status-message" id="feed-status" role="status" aria-live="polite"></p>
+            <div class="post-list" id="blog-feed"></div>
+        </section>
     </main>
 
+    <footer class="site-footer"><a class="brand" href="index.html">Fieldnotes<span>.</span></a><span>Made for the things worth saying.</span></footer>
 </body>
 </html>

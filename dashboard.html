@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Your dashboard | Fieldnotes</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body data-page="dashboard">
+	<header class="site-header">
+		<a class="brand" href="index.html">Fieldnotes<span>.</span></a>
+		<nav class="site-nav" aria-label="Main navigation">
+			<a href="index.html">Stories</a>
+			<a href="create-blog.html">Write</a>
+			<button class="nav-button" type="button" data-logout>Log out</button>
+		</nav>
+	</header>
+	<main class="page-shell dashboard-shell">
+		<section class="dashboard-welcome">
+			<div>
+				<p class="eyebrow">Your Fieldnotes</p>
+				<h1>Welcome, <span id="welcome-name">writer</span>.</h1>
+				<p>Your next story can start with a single sentence.</p>
+			</div>
+			<a class="button-link" href="create-blog.html">Write a post <span aria-hidden="true">&#8594;</span></a>
+		</section>
+		<section class="feed-section" aria-labelledby="dashboard-feed-heading">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow">Keep exploring</p>
+					<h2 id="dashboard-feed-heading">Latest stories</h2>
+				</div>
+			</div>
+			<p class="status-message" id="feed-status" role="status" aria-live="polite"></p>
+			<div class="post-list" id="blog-feed"></div>
+		</section>
+	</main>
+	<footer class="site-footer"><a class="brand" href="index.html">Fieldnotes<span>.</span></a><span>Made for the things worth saying.</span></footer>
+</body>
+</html>

@@ -1,0 +1,8 @@
+node_modules/
+.env
+backend/.env
+backend/data/
+coverage/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Log in | Fieldnotes</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body data-page="login">
+	<header class="site-header">
+		<a class="brand" href="index.html">Fieldnotes<span>.</span></a>
+		<nav class="site-nav" aria-label="Main navigation">
+			<a href="index.html">Stories</a>
+			<a href="register.html">Join</a>
+		</nav>
+	</header>
+	<main class="form-layout">
+		<section class="form-intro">
+			<p class="eyebrow">Welcome back</p>
+			<h1>Your next good read is waiting.</h1>
+			<p>Sign in to pick up where you left off and share something new.</p>
+		</section>
+		<form class="form-panel" id="login-form">
+			<h2>Log in</h2>
+			<label for="email">Email address</label>
+			<input id="email" name="email" type="email" autocomplete="email" required>
+			<label for="password">Password</label>
+			<input id="password" name="password" type="password" autocomplete="current-password" required>
+			<p class="status-message" id="form-status" role="status" aria-live="polite"></p>
+			<button class="primary-button" type="submit">Log in</button>
+			<p class="form-footnote">New to Fieldnotes? <a href="register.html">Create an account</a></p>
+		</form>
+	</main>
+	<footer class="site-footer"><a class="brand" href="index.html">Fieldnotes<span>.</span></a><span>Made for the things worth saying.</span></footer>
+</body>
+</html>

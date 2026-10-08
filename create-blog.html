@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Write a post | Fieldnotes</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body data-page="create-blog">
+	<header class="site-header">
+		<a class="brand" href="index.html">Fieldnotes<span>.</span></a>
+		<nav class="site-nav" aria-label="Main navigation">
+			<a href="index.html">Stories</a>
+			<a href="dashboard.html">Dashboard</a>
+			<button class="nav-button" type="button" data-logout>Log out</button>
+		</nav>
+	</header>
+	<main class="editor-shell">
+		<div class="editor-heading">
+			<p class="eyebrow">Your voice, your page</p>
+			<h1>Write a story.</h1>
+			<p>Give your idea a title, then take it wherever it needs to go.</p>
+		</div>
+		<form class="form-panel editor-form" id="create-blog-form">
+			<label for="title">Title</label>
+			<input id="title" name="title" type="text" maxlength="160" placeholder="A title that draws someone in" required>
+			<label for="excerpt">Short summary <span class="optional-label">Optional</span></label>
+			<input id="excerpt" name="excerpt" type="text" maxlength="240" placeholder="What is this story about?">
+			<label for="content">Your story</label>
+			<textarea id="content" name="content" rows="12" maxlength="50000" placeholder="Start writing here..." required></textarea>
+			<p class="status-message" id="form-status" role="status" aria-live="polite"></p>
+			<div class="form-actions">
+				<a class="text-link" href="dashboard.html">Cancel</a>
+				<button class="primary-button" type="submit">Publish story</button>
+			</div>
+		</form>
+	</main>
+	<footer class="site-footer"><a class="brand" href="index.html">Fieldnotes<span>.</span></a><span>Made for the things worth saying.</span></footer>
+</body>
+</html>
